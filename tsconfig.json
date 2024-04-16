@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    // "jsx": "react-jsx", // default
+
+    "jsx": "preserve", // recommended by mitosis
+    // "jsxImportSource": "@builder.io/mitosis", // this is recommended by mitosis, but breaks vite
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@lib/*": ["src/lib/*"]
+    }
+  },
+  "include": [
+    "src",
+    "postcss.config.cjs",
+    "mitosis.config.cjss",
+    "src/lib/components/react/button/Button.tsx"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
