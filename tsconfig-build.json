@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["lib"],
+  "include": ["output"],
   "build": "tsc --p ./tsconfig-build.json && vite build",
-  "copyPublicDir": false,
+  "copyPublicDir": false
 }

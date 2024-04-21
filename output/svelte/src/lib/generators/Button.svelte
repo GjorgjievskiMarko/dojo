@@ -1,23 +1,24 @@
 <script lang="ts">
-  import { buttonVariants } from "@/styles/button";
-  import { cn } from "@/utils";
-  import { ButtonProps } from "@/types";
+  import { buttonVariants } from "../../styles";
+  import { ButtonProps } from "../../types";
+  import { cn } from "../../utils";
 
   export let variant: ButtonProps["variant"];
   export let size: ButtonProps["size"];
   export let rounded: ButtonProps["rounded"];
   export let width: ButtonProps["width"];
+  export let className: ButtonProps["className"] = undefined;
 </script>
 
 <button
-  {...$$restProps}
+  {...$$props}
   class={cn(
     buttonVariants({
       variant: variant,
       size: size,
       rounded: rounded,
       width: width,
-      className: $$props.class,
+      className: className,
     })
   )}><slot /></button
 >

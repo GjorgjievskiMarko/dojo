@@ -11,11 +11,10 @@ const dojo = {
       900: "#0d054f",
     },
     grey: {
-      90: "#0e0e0e",
-      70: "#4d4d4d",
-      20: "#c1c1c1",
-      10: "#d8d8d8",
-      0: "#eff2f4",
+      900: "#0e0e0e",
+      700: "#4d4d4d",
+      200: "#e7e7e7",
+      100: "#f1f1f1",
     },
     yellow: {
       500: "#ffe600",
@@ -23,18 +22,23 @@ const dojo = {
     },
     indigo: {
       500: "#6e28fa",
+      600: "#6e28fa",
     },
     red: {
       500: "#ff3250",
+      600: "#ff3250",
     },
     pink: {
       500: "#ff78d2",
+      600: "#ff78d2",
     },
     green: {
       500: "00a9a6",
+      600: "00a9a6",
     },
     orange: {
       500: "ff663b",
+      600: "ff663b",
     },
     teal: {
       500: "#0cd0cd",
@@ -42,6 +46,7 @@ const dojo = {
     },
     white: twColors.white,
     black: twColors.black,
+    transparent: twColors.transparent,
   },
   spacing: {
     md: px(32),
@@ -57,27 +62,70 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,svelte}"],
   theme: {
     extend: {
+      backgroundColor: {
+        interactive: {
+          primary: dojo.colors.purple[500],
+          secondary: dojo.colors.white,
+          thertiery: dojo.colors.transparent,
+          info: dojo.colors.indigo[500],
+          success: dojo.colors.green[500],
+          warning: dojo.colors.orange[500],
+          danger: dojo.colors.red[500],
+          neutral: dojo.colors.grey[100],
+        },
+      },
+      textColor: {
+        interactive: {
+          primary: dojo.colors.white,
+          secondary: "",
+          thertiery: "",
+          info: "",
+          success: "",
+          warning: "",
+          danger: "",
+          neutral: dojo.colors.grey[100],
+        },
+      },
+      borderColor: {
+        interactive: {
+          primary: dojo.colors.purple[600],
+          secondary: "",
+          thertiery: "",
+          info: "",
+          success: "",
+          warning: "",
+          danger: "",
+          neutral: dojo.colors.grey[100],
+        },
+      },
       colors: {
-        primary: {
-          DEFAULT: dojo.colors.purple[500],
-          shade: dojo.colors.purple[600],
-          foreground: dojo.colors.white,
-        },
-        secondary: dojo.colors.red[500],
-        accent: {
-          DEFAULT: dojo.colors.teal[500],
-          shade: dojo.colors.teal[600],
-          foreground: dojo.colors.purple[500],
-        },
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        inverted: dojo.colors.white,
         neutral: {
-          0: dojo.colors.grey[0],
-          10: dojo.colors.grey[10],
-          20: dojo.colors.grey[20],
-          70: dojo.colors.grey[70],
-          90: dojo.colors.grey[90],
+          DEFAULT: dojo.colors.grey[100],
+          more: dojo.colors.grey[200],
         },
-        white: dojo.colors.white,
-        black: dojo.colors.black,
+        primary: {
+          DEFAULT: "rgb(var(--color-primary) / <alpha-value>)",
+          more: dojo.colors.purple[600],
+          dark: dojo.colors.purple[900],
+        },
+        info: {
+          DEFAULT: twColors.blue[500],
+          more: twColors.blue[600],
+        },
+        success: {
+          DEFAULT: twColors.green[500],
+          more: twColors.green[600],
+        },
+        warning: {
+          DEFAULT: twColors.orange[500],
+          more: twColors.orange[600],
+        },
+        danger: {
+          DEFAULT: twColors.red[500],
+          more: twColors.red[600],
+        },
       },
       spacing: {
         ...dojo.spacing,

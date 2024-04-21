@@ -1,8 +1,8 @@
-import { buttonVariants } from "@/styles/button";
-import { ButtonProps } from "@/types";
-import { cn } from "@/utils";
+import { buttonVariants } from "../../styles";
+import { ButtonProps } from "../../types";
+import { cn } from "../../utils";
 
-export default function MyButton(props: ButtonProps) {
+export default function Button(props: ButtonProps) {
   return (
     <button
       className={cn(

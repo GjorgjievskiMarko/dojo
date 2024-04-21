@@ -13,9 +13,9 @@
     "isolatedModules": true,
     "noEmit": true,
 
-    // "jsx": "react-jsx", // default
+    "jsx": "react-jsx", // default
 
-    "jsx": "preserve", // recommended by mitosis
+    // "jsx": "preserve", // recommended by mitosis
     // "jsxImportSource": "@builder.io/mitosis", // this is recommended by mitosis, but breaks vite
 
     /* Linting */
@@ -26,11 +26,10 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@utils/*": ["src/utils/*"],
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"],
-      "@lib/*": ["src/lib/*"]
+      "@utils": ["src/utils/index.ts"],
+      "@assets": ["src/assets/index.ts"],
+      "@styles": ["src/styles/index.ts"],
+      "@types": ["src/types/index.ts"]
     }
   },
   "include": [

@@ -7,11 +7,10 @@ import { libInjectCss } from "vite-plugin-lib-inject-css";
 export default defineConfig({
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "@assets/*": path.resolve(__dirname, "./src/assets/*"),
-      "@utils/*": path.resolve(__dirname, "./src/utils/*"),
-      "@styles/*": path.resolve(__dirname, "./src/styles/*"),
-      "@lib/*": path.resolve(__dirname, "./src/lib/*"),
+      "@assets": path.resolve(__dirname, "./src/assets/index.ts"),
+      "@utils": path.resolve(__dirname, "./src/utils/index.ts"),
+      "@styles": path.resolve(__dirname, "./src/styles/index.ts"),
+      "@types": path.resolve(__dirname, "./src/types/index.ts"),
     },
     extensions: [".mdx", ".js", ".svelte", ".tsx", ".ts"],
   },
@@ -21,7 +20,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "lib/index.ts"),
+      entry: path.resolve(__dirname, "output"),
       formats: ["es"],
     },
     rollupOptions: {
