@@ -36,7 +36,7 @@
     "src",
     "postcss.config.cjs",
     "mitosis.config.cjss",
-    "src/lib/components/react/button/Button.tsx"
+    "src/components/react/button/Button.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,6 +1,6 @@
 /** @type {import('@builder.io/mitosis').MitosisConfig} */
 module.exports = {
-  files: "src/lib/**",
+  files: "src/**",
   options: {
     react: {
       typescript: true,

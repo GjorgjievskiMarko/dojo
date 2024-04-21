@@ -1,17 +1,13 @@
 {
   "name": "@gjorgjievskimarko/dojo-components",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.10",
   "repository": "https://github.com/GjorgjievskiMarko/dojo.git",
   "type": "module",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "main": "src/lib/components",
-  "files": [
-    "src/lib/components/**/*.{tsx,svelte,ts}",
-    "src/lib/components/**/*.d.ts"
-  ],
+  "main": "output/react/src",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -23,7 +19,10 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
     "@builder.io/eslint-plugin-mitosis": "^0.0.15",

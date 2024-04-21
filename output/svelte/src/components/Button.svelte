@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { buttonVariants } from "../../styles";
-  import { ButtonProps } from "../../types";
-  import { cn } from "../../utils";
+  import { buttonVariants } from "../styles";
+  import { ButtonProps } from "../types";
+  import { cn } from "../utils";
 
   export let variant: ButtonProps["variant"];
   export let size: ButtonProps["size"];
