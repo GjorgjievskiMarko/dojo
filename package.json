@@ -1,7 +1,7 @@
 {
   "name": "@gjorgjievskimarko/dojo-components",
   "private": false,
-  "version": "0.0.10",
+  "version": "0.0.11",
   "repository": "https://github.com/GjorgjievskiMarko/dojo.git",
   "type": "module",
   "publishConfig": {
@@ -16,7 +16,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.4.3",
