@@ -27,13 +27,11 @@ export const buttonVariants = cva(
         true: "pointer-events-none opacity-80 active:translate-none select-none",
       },
       size: {
-        default: "px-md text-sm py-3",
+        md: "px-md text-sm py-3",
         sm: "px-3 py-[9px] text-xs",
-        icon: "p-3.5",
-        "icon-sm": "p-2",
       },
       rounded: {
-        default: "rounded-full",
+        full: "rounded-full",
         md: "rounded-md",
         lg: "rounded-lg",
       },
@@ -45,8 +43,8 @@ export const buttonVariants = cva(
     defaultVariants: {
       intent: "primary",
       variant: "contained",
-      size: "default",
-      rounded: "default",
+      size: "md",
+      rounded: "full",
       disabled: false,
     },
   }
