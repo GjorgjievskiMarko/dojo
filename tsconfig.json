@@ -22,21 +22,13 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-
-    "baseUrl": ".",
-    "paths": {
-      "@utils": ["src/utils/index.ts"],
-      "@assets": ["src/assets/index.ts"],
-      "@styles": ["src/styles/index.ts"],
-      "@types": ["src/types/index.ts"]
-    }
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src",
     "postcss.config.cjs",
     "mitosis.config.cjss",
-    "src/components/react/button/Button.tsx"
+    "src/lib/components/react/button/Button.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
