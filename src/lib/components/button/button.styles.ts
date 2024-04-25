@@ -1,50 +1,52 @@
 import { cva } from "class-variance-authority";
 
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-1 py-0 text-center whitespace-nowrap font-bold hover:border-transparent transition-transform transition-shadow focus:outline-none focus-visible:outline-none active:transform active:translate-y-[2px] shadow-lg active:shadow-md [&>svg]:size-6 [&>svg]:pb-0.5 [&>svg]:flex-1",
+  "inline-flex items-center justify-center gap-1 py-0 whitespace-nowrap text-center font-semibold hover:border-transparent transition-transform transition-shadow focus:outline-none focus-visible:outline-none active:transform active:translate-y-[2px] [&>svg]:size-6 [&>svg]:pb-0.5 [&>svg]:flex-1",
   {
     variants: {
-      intent: {
-        primary:
-          "bg-primary text-primary border-primary-more hover:border-primary-more",
-        info: "bg-info text-info border-info-more hover:border-info-more",
-        success:
-          "bg-success text-success border-success-more hover:border-success-more",
-        warning:
-          "bg-warning text-warning border-warning-more hover:border-warning-more",
-        danger:
-          "bg-danger text-danger border-danger-more hover:border-danger-more",
-      },
       variant: {
-        contained: "text-inverted border-b border-b-[6px]",
-        inverted:
-          " bg-inverted border-b border-b-[6px] border-opacity/50 hover:border-opacity/50",
-        neutral:
-          "bg-neutral border-b border-b-[6px] border-neutral-more hover:border-neutral-more",
-        ghost: "bg-transparent shadow-none active:shadow-none",
+        primary: `bg-purple-60 text-white border-b border-b-[6px] border-purple-100/30 hover:border-purple-100/10 disabled:text-white/50 shadow-2 active:shadow-1 
+          dark:bg-teal-50 dark:text-purple-60 dark:border-teal-100/30 dark:border-purple-100/20 dark:hover:border-purple-100/20 dark:disabled:text-purple-60/50`,
+        secondary: `bg-grey-0 border-b border-purple-100/10 border-b-[6px] hover:border-purple-100/10 text-purple-60 disabled:text-purple-60/50 shadow-2 active:shadow-1
+          dark:bg-purple-80 dark:border-purple-100/20 dark:hover:border-purple-100/20 dark:text-white dark:disabled:text-white/50`,
+        "secondary-2": `bg-white border-b border-purple-100/10 border-b-[6px] hover:border-purple-100/10 text-purple-60 disabled:text-purple-60/50 shadow-2 active:shadow-1
+          dark:bg-purple-60 dark:text-white dark:border-purple-100/20 dark:hover:border-purple-100/20 dark:disabled:text-white/50`,
+        tertiery: `bg-transparent text-purple-60 border-b border-b-[6px] border-transparent hover:border-transparent disabled:text-purple-60/50
+          dark:text-white disabled:text-white/50`,
+        link: `text-grey-50 underline hover:text-purple-60
+        dark:text-purple-0 dark:hover:text-teal-50`,
       },
       disabled: {
-        true: "pointer-events-none opacity-80 active:translate-none select-none",
+        true: "pointer-events-none active:translate-none select-none",
       },
       size: {
-        md: "px-md text-sm py-3",
-        sm: "px-3 py-[9px] text-xs",
+        default: "py-xs px-lg",
+        sm: "py-2xs px-xs",
       },
       rounded: {
         full: "rounded-full",
         md: "rounded-md",
-        lg: "rounded-lg",
       },
       width: {
         default: "w-auto",
         full: "w-full flex-1",
       },
+      mode: {
+        dark: true,
+        false: false,
+      },
     },
+    compoundVariants: [
+      {
+        mode: "dark",
+        class: "dark",
+      },
+    ],
     defaultVariants: {
-      intent: "primary",
-      variant: "contained",
-      size: "md",
+      variant: "primary",
+      size: "default",
       rounded: "full",
+      mode: false,
       disabled: false,
     },
   }

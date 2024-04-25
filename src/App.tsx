@@ -1,32 +1,39 @@
 import { useEffect } from "react";
-import Button from "../output/react/src/lib/components/button/Button.tsx";
 import { figmaInit } from "./api/figma.ts";
+import Button from "./lib/components/button/Button.tsx";
 
 function App() {
-  const getStyles = async () => {
-    const colors = await figmaInit();
-  };
-
   useEffect(() => {
-    getStyles();
+    (async () => await figmaInit())();
   }, []);
 
   return (
-    <div data-mode="dark" className="w-fit">
+    <div className="w-fit">
       <div className="p-8 flex flex-col gap-4 bg-surface">
         <div className="flex gap-2 justify-between">
-          <h3 className="w-28">Primary</h3>
-          <Button intent="primary" variant="contained">
+          <h3 className="w-28">No mode</h3>
+          <Button variant="primary">Button</Button>
+          <Button variant="secondary">Button</Button>
+          <Button variant="secondary-2">Button</Button>
+          <Button variant="tertiery">Button</Button>
+          <Button variant="link">Button Link</Button>
+        </div>
+        <div className="flex gap-2 justify-between mt-8 bg-purple-80 p-4">
+          <h3 className="w-28">Dark mode</h3>
+          <Button variant="primary" mode="dark">
             Button
           </Button>
-          <Button intent="primary" variant="inverted">
+          <Button variant="secondary" mode="dark">
             Button
           </Button>
-          <Button intent="primary" variant="neutral">
+          <Button variant="secondary-2" mode="dark">
             Button
           </Button>
-          <Button intent="primary" variant="ghost">
+          <Button variant="tertiery" mode="dark">
             Button
+          </Button>
+          <Button variant="link" mode="dark">
+            Button Link
           </Button>
         </div>
       </div>
