@@ -72,7 +72,9 @@ export const figmaInit = async () => {
     })
   );
 
-  const [colors, text, effect, grid] = types;
+  // const [colors, text, effect, grid] = types;
+
+  const [colors] = types;
 
   const dojoColors = {};
 

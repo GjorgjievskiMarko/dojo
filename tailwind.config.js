@@ -14,15 +14,6 @@ export default {
   theme: {
     extend: {
       ...dojo,
-      fontSize: {
-        ["btn-lg"]: [
-          "20px",
-          {
-            lineHeight: "24px",
-            fontWeight: 500,
-          },
-        ],
-      },
     },
   },
   variants: {

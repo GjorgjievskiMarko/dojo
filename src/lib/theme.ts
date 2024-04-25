@@ -1,4 +1,3 @@
-const px = (px: number) => `${px * 0.0625}rem`;
 const fontWeight = {
   thin: "100",
   extralight: "200",
@@ -203,5 +202,8 @@ export const dojo = {
     modal: "30",
     "modal-2": "40",
     "modal-3": "50",
+  },
+  borderWidth: {
+    6: "6px",
   },
 };
