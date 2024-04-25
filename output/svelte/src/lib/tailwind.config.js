@@ -2,7 +2,7 @@
 const twColors = require("tailwindcss/colors");
 import { dojo } from "./theme";
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,svelte}", "./components/**/*.{js,ts,jsx,tsx,svelte}", "./node_modules/**/*.{js,ts,jsx,tsx,svelte}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,svelte}", "./components/**/*.{js,ts,jsx,tsx,svelte}", "./node_modules/@GjorgjievskiMarko/dojo-components/**/*.{js,ts,jsx,tsx,svelte}"],
   theme: {
     extend: {
       colors: {
