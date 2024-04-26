@@ -91,7 +91,7 @@ function App() {
           <Button variant="primary">Button</Button>
           <Button variant="secondary">Button</Button>
           <Button variant="secondary-2">Button</Button>
-          <Button variant="tertiery">Button</Button>
+          <Button variant="tertiary">Button</Button>
           <Button variant="link">Button Link</Button>
         </div>
         <div className="flex gap-2 justify-between mt-8 bg-purple-80 p-4">
@@ -105,7 +105,7 @@ function App() {
           <Button variant="secondary-2" mode="dark">
             Button
           </Button>
-          <Button variant="tertiery" mode="dark">
+          <Button variant="tertiary" mode="dark">
             Button
           </Button>
           <Button variant="link" mode="dark">
@@ -123,7 +123,7 @@ function App() {
           <Button variant="secondary-2" size="sm">
             Button
           </Button>
-          <Button variant="tertiery" size="sm">
+          <Button variant="tertiary" size="sm">
             Button
           </Button>
           <Button variant="link" size="sm">

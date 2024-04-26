@@ -11,7 +11,7 @@ export const buttonVariants = cva(
           dark:bg-purple-80 dark:border-purple-100/20 dark:hover:border-purple-100/20 dark:text-white dark:disabled:text-white/50`,
         "secondary-2": `bg-white border-b border-purple-100/10 hover:border-purple-100/10 text-purple-60 disabled:text-purple-60/50 shadow-2 active:shadow-1
           dark:bg-purple-60 dark:text-white dark:border-purple-100/20 dark:hover:border-purple-100/20 dark:disabled:text-white/50`,
-        tertiery: `bg-transparent text-purple-60 border-b border-transparent hover:border-transparent disabled:text-purple-60/50
+        tertiary: `bg-transparent text-purple-60 border-b border-transparent hover:border-transparent disabled:text-purple-60/50
           dark:text-white disabled:text-white/50`,
         link: `text-grey-50 underline hover:text-purple-60 border-none
         dark:text-purple-0 dark:hover:text-teal-50`,
@@ -32,8 +32,8 @@ export const buttonVariants = cva(
         full: "w-full flex-1",
       },
       mode: {
-        dark: true,
-        false: false,
+        light: "light",
+        dark: "dark",
       },
     },
     compoundVariants: [
@@ -47,7 +47,7 @@ export const buttonVariants = cva(
       size: "default",
       rounded: "full",
       width: "default",
-      mode: false,
+      mode: "light",
       disabled: false,
     },
   }
