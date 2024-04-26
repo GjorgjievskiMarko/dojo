@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 const twColors = require("tailwindcss/colors");
+const plugin = require("./src/lib/theme/plugin");
 
-import { dojo } from "./src/lib/theme";
+// const { extendedUtilitiesPlugin } = plugins;
+
+// import { dojo } from "./src/lib/theme/theme";
 
 export default {
   darkMode: "selector",
@@ -13,11 +16,11 @@ export default {
   ],
   theme: {
     extend: {
-      ...dojo,
+      // ...dojo,
     },
   },
   variants: {
     opacity: ["disabled"],
   },
-  plugins: [],
+  plugins: [plugin],
 };
