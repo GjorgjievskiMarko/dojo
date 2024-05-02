@@ -1,132 +1,6 @@
-const fontWeight = {
-  thin: "100",
-  extralight: "200",
-  light: "300",
-  book: "400",
-  normal: "450",
-  medium: "500",
-  semibold: "600",
-  bold: "700",
-  extrabold: "800",
-  black: "900",
-};
+import { fontSize } from "./font";
 
-const fontSize = {
-  overline: [
-    "10px",
-    {
-      lineHeight: "10px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-  "2xs": [
-    "10px",
-    {
-      lineHeight: "12px",
-      fontWeight: fontWeight.book,
-    },
-  ],
-  xs: [
-    "12px",
-    {
-      lineHeight: "20px",
-      fontWeight: fontWeight.book,
-    },
-  ],
-  sm: [
-    "14px",
-    {
-      lineHeight: "20px",
-      fontWeight: fontWeight.book,
-    },
-  ],
-  base: [
-    "16px",
-    {
-      lineHeight: "24px",
-      fontWeight: fontWeight.book,
-    },
-  ],
-  lg: [
-    "20px",
-    {
-      lineHeight: "28px",
-      fontWeight: fontWeight.book,
-    },
-  ],
-
-  "h-sm": [
-    "16px",
-    {
-      lineHeight: "20px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-  h: [
-    "20px",
-    {
-      lineHeight: "24px",
-      letterSpacing: "-0.5px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-  "h-lg": [
-    "25px",
-    {
-      lineHeight: "28px",
-      letterSpacing: "-0.5px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-  "h-xl": [
-    "31px",
-    {
-      lineHeight: "36px",
-      letterSpacing: "-1px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-  "h-2xl": [
-    "39px",
-    {
-      lineHeight: "44px",
-      letterSpacing: "-1px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-  "h-3xl": [
-    "48px",
-    {
-      lineHeight: "56px",
-      letterSpacing: "-2px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-
-  "btn-sm": [
-    "14px",
-    {
-      lineHeight: "20px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-  btn: [
-    "16px",
-    {
-      lineHeight: "20px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-  "btn-lg": [
-    "20px",
-    {
-      lineHeight: "24px",
-      fontWeight: fontWeight.bold,
-    },
-  ],
-};
-
-module.exports = {
+export default {
   colors: {
     grey: {
       0: "#EFF2F4",
@@ -144,6 +18,10 @@ module.exports = {
       80: "#3C0098",
       90: "#32007E",
       100: "#130031",
+      "100a10": "#1300311a",
+      "100a20": "#13003033",
+      "100a30": "#1300304d",
+      "100a50": "#12002e80",
     },
     teal: {
       10: "#BDFAF9",
@@ -177,6 +55,7 @@ module.exports = {
       30: "#FF808C",
     },
     white: "#FFFFFF",
+    whitea50: "#FFFFFF80",
     black: "#000000",
   },
   spacing: {
@@ -204,8 +83,20 @@ module.exports = {
     "modal-2": "40",
     "modal-3": "50",
   },
+  borderRadius: {
+    none: "0",
+    xs: "4px",
+    sm: "8px",
+    md: "12px",
+    lg: "16px",
+    xl: "24px",
+    round: "999px",
+  },
   borderWidth: {
     6: "6px",
   },
-  fontSize,
+  borderStyle: {
+    solid: "solid",
+  },
+  fontSize: fontSize,
 };

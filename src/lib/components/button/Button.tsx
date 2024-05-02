@@ -16,9 +16,7 @@ function Button(props: ButtonProps) {
           className: props.className,
         })
       )}
-    >
-      {props.children}
-    </button>
+    />
   );
 }
 

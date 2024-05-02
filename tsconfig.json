@@ -13,9 +13,9 @@
     "isolatedModules": true,
     "noEmit": true,
 
-    "jsx": "react-jsx", // default
+    // "jsx": "react-jsx", // default
 
-    // "jsx": "preserve", // recommended by mitosis
+    "jsx": "preserve", // recommended by mitosis
     // "jsxImportSource": "@builder.io/mitosis", // this is recommended by mitosis, but breaks vite
 
     /* Linting */

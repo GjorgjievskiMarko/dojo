@@ -1,4 +1,4 @@
-import { populateObjWithColors } from "./utils";
+import { colorsConfigFn, fontSizeConfigFn } from "./utils";
 
 type StyleType = "FILL" | "TEXT" | "EFFECT" | "GRID";
 
@@ -53,33 +53,33 @@ export const figmaInit = async () => {
 
   const styleTypes = ["FILL", "TEXT", "EFFECT", "GRID"];
 
-  const types = await Promise.all(
-    styleTypes.map(async (type) => {
+  const types = styleTypes.map(async (type) => {
+    // @ts-expect-error
+    const nodes = await getNodes(getNodeIds(filterStyles(type)));
+    return Object.values(nodes.nodes).map((node) => {
       // @ts-expect-error
-      const nodes = await getNodes(getNodeIds(filterStyles(type)));
-      return Object.values(nodes.nodes).map((node) => {
-        // @ts-expect-error
-        const { id, name, style, fills, effects, layoutGrids } = node.document;
-        return {
-          id,
-          name,
-          style,
-          fills: fills[0],
-          effects,
-          layoutGrids,
-        };
-      });
-    })
-  );
+      const { id, name, style, fills, effects, layoutGrids } = node.document;
+      return {
+        id,
+        name,
+        style,
+        fills: fills[0],
+        effects,
+        layoutGrids,
+      };
+    });
+  });
 
-  // const [colors, text, effect, grid] = types;
+  const [fill, text, effects, grid] = await Promise.all(types);
 
-  const [colors] = types;
+  const colors = colorsConfigFn(fill);
+  const fontSize = fontSizeConfigFn(text);
 
-  const dojoColors = {};
+  console.log(grid);
 
-  const populatedObj = await populateObjWithColors(colors, dojoColors);
-  console.log(populatedObj);
+  let config = { fontSize, colors };
 
-  return await populatedObj;
+  // console.log(config);
+
+  return await config;
 };

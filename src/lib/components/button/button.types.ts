@@ -4,6 +4,6 @@ import { buttonVariants } from "./button.styles";
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  children?: React.ReactNode;
+  children?: any;
   disabled?: boolean;
 }

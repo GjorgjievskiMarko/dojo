@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-const twColors = require("tailwindcss/colors");
-const plugin = require("./src/lib/theme/plugin");
+// const plugin = require("./src/lib/theme/plugin");
+
+import plugin from "./src/lib/theme/plugin";
 
 // const { extendedUtilitiesPlugin } = plugins;
 
@@ -19,8 +20,9 @@ export default {
       // ...dojo,
     },
   },
+  safelist: ["text-2xl", "text-h-md"],
   variants: {
     opacity: ["disabled"],
   },
-  plugins: [plugin],
+  plugins: [...plugin],
 };

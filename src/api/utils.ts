@@ -40,10 +40,8 @@ const set = (obj: any, path: string, value: string): void => {
   schema[pList[len - 1]] = value;
 };
 
-export const populateObjWithColors = async (
-  colors: Record<string, any>[],
-  obj: unknown
-) => {
+export const colorsConfigFn = (colors: Record<string, any>[]) => {
+  let obj = {};
   colors.forEach(({ name, fills: { color } }) => {
     if (color) {
       set(obj, name.toLowerCase(), rgbaToHex({ ...color }));
@@ -51,4 +49,30 @@ export const populateObjWithColors = async (
   });
 
   return obj;
+};
+
+export const fontSizeConfigFn = (text: any) => {
+  let fontSize = {};
+  text.forEach(({ name, style }: { name: any; style: any }) => {
+    const {
+      fontSize: fontSizePx,
+      fontWeight,
+      letterSpacing,
+      lineHeightPx,
+    } = style;
+
+    fontSize = {
+      ...fontSize,
+      [name]: [
+        `${fontSizePx}px`,
+        {
+          lineHeight: `${lineHeightPx}px`,
+          letterSpacing: `${letterSpacing}px`,
+          fontWeight,
+        },
+      ],
+    };
+  });
+
+  return fontSize;
 };
